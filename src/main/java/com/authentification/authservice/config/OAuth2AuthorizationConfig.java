@@ -23,11 +23,17 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
+
     @Autowired
+    @Qualifier("userDetailsServiceBean")
     private CustomUserDetailsService userDetailsService;
+
     @Autowired
+    @Qualifier("authClientDetailsServiceBean")
     private AuthClientDetailsService authClientDetailsService;
+
     @Autowired
+    @Qualifier("encoderBean")
     private PasswordEncoder encoder;
 
     @Override
